@@ -1,33 +1,295 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Politique de Confidentialité – Mon Tableau de Motivation</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Mon Tableau de Motivation</title>
 <style>
-  body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
-  h1 { color: #6B4EFF; }
-  h2 { color: #444; margin-top: 30px; }
+  :root {
+    --fond: #FDF7F3; --carte: #FFFFFF; --encre: #33203F; --doux: #7A6A85;
+    --accent: #C43C7E; --trait: #E8DCE4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --fond:#191320; --carte:#221A2B; --encre:#F0E8F4; --doux:#A498B0; --accent:#F292C0; --trait:#3A2E45; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2rem 1.25rem 4rem;
+    background: var(--fond); color: var(--encre);
+    font: 1.0625rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .barre {
+    max-width: 46rem; margin: 0 auto 2rem; display: flex; flex-wrap: wrap; gap: .4rem;
+  }
+  .barre button {
+    font: inherit; font-size: .875rem; font-weight: 600;
+    padding: .4rem .8rem; border-radius: 999px; cursor: pointer;
+    background: var(--carte); color: var(--doux);
+    border: 1px solid var(--trait);
+  }
+  .barre button.actif { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .langue {
+    max-width: 46rem; margin: 0 auto; background: var(--carte);
+    border: 1px solid var(--trait); border-radius: 16px; padding: 2rem 1.75rem;
+    display: none;
+  }
+  .langue.visible { display: block; }
+  h1 { font-size: 1.75rem; line-height: 1.15; margin: 0 0 .35rem; letter-spacing: -.02em; }
+  .sous { margin: 0; color: var(--doux); font-weight: 600; }
+  .maj  { margin: .2rem 0 0; color: var(--doux); font-size: .875rem; }
+  .intro {
+    margin: 1.5rem 0; padding: 1rem 1.15rem; border-radius: 12px;
+    background: var(--fond); border: 1px solid var(--trait);
+  }
+  h2 {
+    font-size: 1.125rem; margin: 2rem 0 .5rem; padding-bottom: .35rem;
+    border-bottom: 2px solid var(--encre); letter-spacing: -.01em;
+  }
+  p { margin: .65rem 0; }
+  ul { margin: .65rem 0; padding-inline-start: 1.2rem; }
+  li { margin: .3rem 0; }
+  li::marker { color: var(--accent); }
+  footer {
+    margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--trait);
+    color: var(--doux); font-size: .875rem;
+  }
+  [dir="rtl"] { text-align: right; }
 </style>
 </head>
 <body>
-<h1>Politique de Confidentialité</h1>
-<p><strong>Mon Tableau de Motivation (BravoBoard)</strong></p>
-<p>Dernière mise à jour : juin 2026</p>
+  <nav class="barre">
+    <button data-l="fr" class="actif">Français</button>
+    <button data-l="en">English</button>
+    <button data-l="es">Español</button>
+    <button data-l="de">Deutsch</button>
+    <button data-l="nl">Nederlands</button>
+    <button data-l="pt">Português</button>
+    <button data-l="ar">العربية</button>
+  </nav>
 
-<h2>1. Collecte de données</h2>
-<p>Notre application ne collecte pas de données personnelles identifiables. Les profils enfants (prénom, avatar, étoiles) sont stockés uniquement sur votre appareil.</p>
-
-<h2>2. Abonnements</h2>
-<p>Les achats intégrés sont gérés via Apple App Store et RevenueCat. Nous ne stockons pas vos informations de paiement.</p>
-
-<h2>3. Données des enfants</h2>
-<p>Cette application est destinée aux enfants. Nous ne collectons, n'utilisons ni ne partageons de données personnelles d'enfants de moins de 13 ans.</p>
-
-<h2>4. Services tiers</h2>
-<p>Nous utilisons RevenueCat pour la gestion des abonnements. Consultez leur politique : <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></p>
-
-<h2>5. Contact</h2>
-<p>Pour toute question : <a href="mailto:alyssia9986@hotmail.com">alyssia9986@hotmail.com</a></p>
+  <section class="langue" id="l-fr" lang="fr">
+    <header>
+      <h1>Politique de Confidentialité</h1>
+      <p class="sous">Application Mon Tableau de Motivation</p>
+      <p class="maj">Mise à jour : août 2026</p>
+    </header>
+    <p class="intro">🛡️ La protection de la vie privée des enfants et des familles est notre priorité. Cette page explique clairement quelles données nous collectons, pourquoi, et comment nous les protégeons.</p>
+      <h2>Qui sommes-nous ?</h2>
+      <p>Mon Tableau de Motivation est une application mobile de motivation pour enfants, disponible sur iPhone et Android. Responsable : Mon Tableau de Motivation — Contact : support@tdmotivation.app</p>
+      <h2>Données collectées</h2>
+      <p>📱 Sur l'appareil : prénom de l'enfant, avatar ou photo, progression, missions, récompenses, humeur du jour, code parent.</p>
+      <p>☁️ Synchronisé en ligne dès qu'un second appareil est relié (tablette de l'enfant, téléphone du second parent) : tout ce qui précède, ainsi que les photos que vous intégrez aux missions et le message vocal que vous enregistrez pour votre enfant.</p>
+      <p>👫 Si l'espace amis est utilisé : prénom, avatar, niveau et série de l'enfant, code ami, ainsi que les messages vocaux et les défis échangés avec ses amis. Les messages vocaux sont supprimés au bout de 24 heures.</p>
+      <p>🔧 Techniques : adresse de notification de l'appareil, identifiant de compte, rapports de plantage et statistiques d'usage anonymes (aucun nom, aucun contenu).</p>
+      <p>✅ Jamais collectés : nom de famille, adresse postale, téléphone, données bancaires, localisation.</p>
+      <h2>Pourquoi ces données ?</h2>
+      <ul><li>Fonctionnement de l'app et sauvegarde de la progression</li><li>Espace social optionnel (familles entre elles)</li><li>Authentification parent</li></ul>
+      <p>Base légale : consentement du parent + exécution du contrat d'abonnement.</p>
+      <h2>Protection des enfants</h2>
+      <p>👶 L'espace parent est protégé par un code, et toute sortie de l'application demande de résoudre une opération réservée aux adultes.</p>
+      <p>👫 L'espace amis est accessible à l'enfant depuis son tableau : il y voit ses amis, peut accepter une invitation et échanger des messages vocaux avec eux. Un ami ne s'ajoute qu'en saisissant un code communiqué de la main à la main.</p>
+      <p>Nous ne vendons, ne partageons ni ne monétisons jamais les données relatives aux enfants. L'application ne contient aucune publicité et aucun traceur.</p>
+      <h2>Partage des données</h2>
+      <p>Vos données ne sont jamais vendues. Elles transitent uniquement par :<br>• Google Firebase — hébergement, authentification et synchronisation<br>• Expo — acheminement des notifications<br>• RevenueCat — gestion de l'abonnement<br>• Apple App Store et Google Play — paiements<br>• Les familles avec lesquelles votre enfant échange, si l'espace amis est utilisé</p>
+      <h2>Sécurité</h2>
+      <ul><li>Données locales : isolation de l'application (sandbox iOS et Android)</li><li>Firebase : TLS/SSL, et règles d'accès qui réservent chaque donnée à votre foyer</li><li>Mot de passe du compte : géré par Firebase, jamais accessible à l'application</li><li>Code parent : conservé sur l'appareil uniquement, jamais transmis</li></ul>
+      <h2>Vos droits (RGPD)</h2>
+      <p>Vous avez le droit d'accéder, corriger, supprimer et exporter vos données. Pour exercer ces droits ou poser des questions sur la confidentialité, contactez-nous à support@tdmotivation.app — réponse sous 30 jours.</p>
+    <footer>© 2026 Mon Tableau de Motivation · Tous droits réservés</footer>
+  </section>
+  <section class="langue" id="l-en" lang="en">
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="sous">My Motivation Board App</p>
+      <p class="maj">Updated: August 2026</p>
+    </header>
+    <p class="intro">🛡️ Protecting the privacy of children and families is our top priority. This page explains what data we collect, why, and how we protect it.</p>
+      <h2>Who are we?</h2>
+      <p>My Motivation Board is a mobile motivation app for children, available on iPhone and Android. Controller: My Motivation Board — Contact: support@tdmotivation.app</p>
+      <h2>Data collected</h2>
+      <p>📱 On the device: the child's first name, avatar or photo, progress, missions, rewards, daily mood, parent code.</p>
+      <p>☁️ Synced online as soon as a second device is linked (the child's tablet, the second parent's phone): all of the above, plus any photos you add to missions and the voice message you record for your child.</p>
+      <p>👫 If the friends area is used: the child's first name, avatar, level and streak, friend code, along with the voice messages and challenges exchanged with friends. Voice messages are deleted after 24 hours.</p>
+      <p>🔧 Technical: the device's notification address, account identifier, crash reports and anonymous usage statistics (no names, no content).</p>
+      <p>✅ Never collected: surname, postal address, phone number, payment details, location.</p>
+      <h2>Why this data?</h2>
+      <ul><li>App functionality and progress saving</li><li>Optional social space (between families)</li><li>Parental authentication</li></ul>
+      <p>Legal basis: parent's consent + subscription contract.</p>
+      <h2>Child protection</h2>
+      <p>👶 The parent area is protected by a code, and every link leaving the app requires solving a calculation meant for grown-ups.</p>
+      <p>👫 The friends area is reachable by the child from their board: they can see their friends, accept an invitation and exchange voice messages with them. A friend can only be added by entering a code shared hand to hand.</p>
+      <p>We never sell, share or monetise children's data. The app contains no advertising and no trackers.</p>
+      <h2>Data sharing</h2>
+      <p>Your data is never sold. It passes only through:<br>• Google Firebase — hosting, authentication and syncing<br>• Expo — notification delivery<br>• RevenueCat — subscription management<br>• Apple App Store and Google Play — payments<br>• The families your child exchanges with, if the friends area is used</p>
+      <h2>Security</h2>
+      <ul><li>Local data: app sandboxing (iOS and Android)</li><li>Firebase: TLS/SSL, with access rules restricting every piece of data to your household</li><li>Account password: handled by Firebase, never accessible to the app</li><li>Parent code: kept on the device only, never transmitted</li></ul>
+      <h2>Your rights (GDPR)</h2>
+      <p>You have the right to access, correct, delete and export your data. Contact us at support@tdmotivation.app — reply within 30 days.</p>
+    <footer>© 2026 My Motivation Board · All rights reserved</footer>
+  </section>
+  <section class="langue" id="l-es" lang="es">
+    <header>
+      <h1>Política de Privacidad</h1>
+      <p class="sous">Aplicación Mi Tablero de Motivación</p>
+      <p class="maj">Actualizado: agosto de 2026</p>
+    </header>
+    <p class="intro">🛡️ Proteger la privacidad de los niños y de las familias es nuestra prioridad. Esta página explica con claridad qué datos recogemos, por qué y cómo los protegemos.</p>
+      <h2>¿Quiénes somos?</h2>
+      <p>Mi Tablero de Motivación es una aplicación móvil de motivación para niños, disponible en iPhone y Android. Responsable: Mi Tablero de Motivación — Contacto: support@tdmotivation.app</p>
+      <h2>Datos recogidos</h2>
+      <p>📱 En el dispositivo: nombre del niño, avatar o foto, progreso, misiones, recompensas, estado de ánimo del día, código de los padres.</p>
+      <p>☁️ Sincronizado en línea en cuanto se vincula un segundo dispositivo (la tableta del niño, el móvil del segundo progenitor): todo lo anterior, además de las fotos que añadas a las misiones y el mensaje de voz que grabes para tu hijo.</p>
+      <p>👫 Si se usa el espacio de amigos: nombre, avatar, nivel y racha del niño, código de amigo, así como los mensajes de voz y los retos intercambiados con sus amigos. Los mensajes de voz se eliminan a las 24 horas.</p>
+      <p>🔧 Técnicos: dirección de notificaciones del dispositivo, identificador de cuenta, informes de fallos y estadísticas de uso anónimas (sin nombres, sin contenido).</p>
+      <p>✅ Nunca recopilados: apellidos, dirección postal, teléfono, datos bancarios, ubicación.</p>
+      <h2>¿Para qué sirven estos datos?</h2>
+      <ul><li>Funcionamiento de la aplicación y guardado del progreso</li><li>Espacio social opcional (entre familias)</li><li>Autenticación del progenitor</li></ul>
+      <p>Base legal: consentimiento del progenitor y ejecución del contrato de suscripción.</p>
+      <h2>Protección de los niños</h2>
+      <p>👶 El espacio de padres está protegido por un código, y cualquier enlace que salga de la aplicación exige resolver una operación reservada a adultos.</p>
+      <p>👫 El espacio de amigos es accesible para el niño desde su tablero: puede ver a sus amigos, aceptar una invitación e intercambiar mensajes de voz con ellos. Un amigo solo se añade introduciendo un código comunicado en mano.</p>
+      <p>Nunca vendemos, compartimos ni monetizamos los datos de los niños. La aplicación no contiene publicidad ni rastreadores.</p>
+      <h2>Compartición de datos</h2>
+      <p>Tus datos nunca se venden. Solo pasan por:<br>• Google Firebase — alojamiento, autenticación y sincronización<br>• Expo — envío de notificaciones<br>• RevenueCat — gestión de la suscripción<br>• Apple App Store y Google Play — pagos<br>• Las familias con las que tu hijo intercambia, si se usa el espacio de amigos</p>
+      <h2>Seguridad</h2>
+      <ul><li>Datos locales: aislamiento de la aplicación (sandbox iOS y Android)</li><li>Firebase: TLS/SSL, con reglas de acceso que reservan cada dato a tu hogar</li><li>Contraseña de la cuenta: gestionada por Firebase, nunca accesible para la app</li><li>Código de los padres: se conserva solo en el dispositivo, nunca se transmite</li></ul>
+      <h2>Tus derechos (RGPD)</h2>
+      <p>Tienes derecho a acceder, corregir, suprimir y exportar tus datos. Para ejercer estos derechos o hacer preguntas sobre privacidad, escríbenos a support@tdmotivation.app — respuesta en un plazo de 30 días.</p>
+    <footer>© 2026 Mi Tablero de Motivación · Todos los derechos reservados</footer>
+  </section>
+  <section class="langue" id="l-de" lang="de">
+    <header>
+      <h1>Datenschutzerklärung</h1>
+      <p class="sous">App Meine Motivationstafel</p>
+      <p class="maj">Aktualisiert: August 2026</p>
+    </header>
+    <p class="intro">🛡️ Der Schutz der Privatsphäre von Kindern und Familien hat für uns Vorrang. Diese Seite erklärt verständlich, welche Daten wir erheben, wozu und wie wir sie schützen.</p>
+      <h2>Wer wir sind</h2>
+      <p>Meine Motivationstafel ist eine mobile Motivations-App für Kinder, verfügbar für iPhone und Android. Verantwortlich: Meine Motivationstafel — Kontakt: support@tdmotivation.app</p>
+      <h2>Erhobene Daten</h2>
+      <p>📱 Auf dem Gerät: Vorname des Kindes, Avatar oder Foto, Fortschritt, Missionen, Belohnungen, Stimmung des Tages, Elterncode.</p>
+      <p>☁️ Online synchronisiert, sobald ein zweites Gerät verbunden ist (Tablet des Kindes, Telefon des zweiten Elternteils): alles Genannte, dazu die Fotos, die Sie Missionen hinzufügen, und die Sprachnachricht, die Sie für Ihr Kind aufnehmen.</p>
+      <p>👫 Bei Nutzung des Freundebereichs: Vorname, Avatar, Level und Serie des Kindes, Freundescode sowie die mit Freunden ausgetauschten Sprachnachrichten und Herausforderungen. Sprachnachrichten werden nach 24 Stunden gelöscht.</p>
+      <p>🔧 Technisch: Benachrichtigungsadresse des Geräts, Kontokennung, Absturzberichte und anonyme Nutzungsstatistiken (keine Namen, keine Inhalte).</p>
+      <p>✅ Nie erhoben: Nachname, Postanschrift, Telefonnummer, Zahlungsdaten, Standort.</p>
+      <h2>Wozu diese Daten?</h2>
+      <ul><li>Betrieb der App und Sicherung des Fortschritts</li><li>Optionaler Freundesbereich (Familien untereinander)</li><li>Authentifizierung des Elternteils</li></ul>
+      <p>Rechtsgrundlage: Einwilligung des Elternteils und Erfüllung des Abonnementvertrags.</p>
+      <h2>Schutz der Kinder</h2>
+      <p>👶 Der Elternbereich ist durch einen Code geschützt, und jeder Link, der die App verlässt, verlangt das Lösen einer Rechenaufgabe für Erwachsene.</p>
+      <p>👫 Der Freundebereich ist für das Kind von seiner Tafel aus erreichbar: Es sieht seine Freunde, kann eine Einladung annehmen und Sprachnachrichten mit ihnen austauschen. Ein Freund lässt sich nur über einen persönlich weitergegebenen Code hinzufügen.</p>
+      <p>Wir verkaufen, teilen oder monetarisieren Kinderdaten niemals. Die App enthält keine Werbung und keine Tracker.</p>
+      <h2>Weitergabe von Daten</h2>
+      <p>Ihre Daten werden nie verkauft. Sie laufen ausschließlich über:<br>• Google Firebase — Hosting, Authentifizierung und Synchronisation<br>• Expo — Zustellung der Benachrichtigungen<br>• RevenueCat — Verwaltung des Abonnements<br>• Apple App Store und Google Play — Zahlungen<br>• Die Familien, mit denen Ihr Kind austauscht, sofern der Freundebereich genutzt wird</p>
+      <h2>Sicherheit</h2>
+      <ul><li>Lokale Daten: Abschottung der App (Sandbox unter iOS und Android)</li><li>Firebase: TLS/SSL, mit Zugriffsregeln, die jede Angabe auf Ihren Haushalt beschränken</li><li>Kontopasswort: von Firebase verwaltet, für die App nie zugänglich</li><li>Elterncode: verbleibt ausschließlich auf dem Gerät, wird nie übertragen</li></ul>
+      <h2>Ihre Rechte (DSGVO)</h2>
+      <p>Sie haben das Recht, Ihre Daten einzusehen, zu berichtigen, zu löschen und zu exportieren. Um diese Rechte auszuüben oder Fragen zum Datenschutz zu stellen, schreiben Sie an support@tdmotivation.app — Antwort innerhalb von 30 Tagen.</p>
+    <footer>© 2026 Meine Motivationstafel · Alle Rechte vorbehalten</footer>
+  </section>
+  <section class="langue" id="l-nl" lang="nl">
+    <header>
+      <h1>Privacyverklaring</h1>
+      <p class="sous">App Mijn Motivatiebord</p>
+      <p class="maj">Bijgewerkt: augustus 2026</p>
+    </header>
+    <p class="intro">🛡️ De privacy van kinderen en gezinnen beschermen is onze prioriteit. Deze pagina legt helder uit welke gegevens we verzamelen, waarom en hoe we ze beschermen.</p>
+      <h2>Wie zijn wij?</h2>
+      <p>Mijn Motivatiebord is een mobiele motivatie-app voor kinderen, beschikbaar op iPhone en Android. Verwerkingsverantwoordelijke: Mijn Motivatiebord — Contact: support@tdmotivation.app</p>
+      <h2>Verzamelde gegevens</h2>
+      <p>📱 Op het apparaat: voornaam van het kind, avatar of foto, voortgang, missies, beloningen, humeur van de dag, oudercode.</p>
+      <p>☁️ Online gesynchroniseerd zodra een tweede apparaat is gekoppeld (de tablet van het kind, de telefoon van de tweede ouder): al het bovenstaande, plus de foto's die je aan missies toevoegt en het gesproken bericht dat je voor je kind opneemt.</p>
+      <p>👫 Als het vriendengedeelte wordt gebruikt: voornaam, avatar, niveau en reeks van het kind, vriendencode, evenals de gesproken berichten en uitdagingen die met vrienden worden uitgewisseld. Gesproken berichten worden na 24 uur verwijderd.</p>
+      <p>🔧 Technisch: het notificatieadres van het apparaat, account-id, crashrapporten en anonieme gebruiksstatistieken (geen namen, geen inhoud).</p>
+      <p>✅ Nooit verzameld: achternaam, postadres, telefoonnummer, betaalgegevens, locatie.</p>
+      <h2>Waarvoor dienen deze gegevens?</h2>
+      <ul><li>Werking van de app en het bewaren van de voortgang</li><li>Optionele vriendensectie (gezinnen onderling)</li><li>Authenticatie van de ouder</li></ul>
+      <p>Rechtsgrond: toestemming van de ouder en uitvoering van de abonnementsovereenkomst.</p>
+      <h2>Bescherming van kinderen</h2>
+      <p>👶 Het oudergedeelte is beveiligd met een code, en elke link die de app verlaat vraagt eerst om een rekensom voor volwassenen.</p>
+      <p>👫 Het vriendengedeelte is voor het kind bereikbaar vanaf zijn bord: het ziet zijn vrienden, kan een uitnodiging accepteren en gesproken berichten met hen uitwisselen. Een vriend kan alleen worden toegevoegd met een code die persoonlijk is doorgegeven.</p>
+      <p>Wij verkopen, delen of verzilveren gegevens van kinderen nooit. De app bevat geen advertenties en geen trackers.</p>
+      <h2>Delen van gegevens</h2>
+      <p>Je gegevens worden nooit verkocht. Ze gaan uitsluitend via:<br>• Google Firebase — hosting, authenticatie en synchronisatie<br>• Expo — bezorging van meldingen<br>• RevenueCat — beheer van het abonnement<br>• Apple App Store en Google Play — betalingen<br>• De gezinnen waarmee je kind uitwisselt, als het vriendengedeelte wordt gebruikt</p>
+      <h2>Beveiliging</h2>
+      <ul><li>Lokale gegevens: afscherming van de app (sandbox op iOS en Android)</li><li>Firebase: TLS/SSL, met toegangsregels die elk gegeven tot jouw gezin beperken</li><li>Accountwachtwoord: beheerd door Firebase, nooit toegankelijk voor de app</li><li>Oudercode: blijft uitsluitend op het apparaat, wordt nooit verzonden</li></ul>
+      <h2>Jouw rechten (AVG)</h2>
+      <p>Je hebt het recht om je gegevens in te zien, te corrigeren, te wissen en te exporteren. Om deze rechten uit te oefenen of vragen te stellen over privacy, schrijf ons op support@tdmotivation.app — antwoord binnen 30 dagen.</p>
+    <footer>© 2026 Mijn Motivatiebord · Alle rechten voorbehouden</footer>
+  </section>
+  <section class="langue" id="l-pt" lang="pt">
+    <header>
+      <h1>Política de Privacidade</h1>
+      <p class="sous">Aplicação O Meu Quadro de Motivação</p>
+      <p class="maj">Atualizado: agosto de 2026</p>
+    </header>
+    <p class="intro">🛡️ Proteger a privacidade das crianças e das famílias é a nossa prioridade. Esta página explica com clareza que dados recolhemos, porquê e como os protegemos.</p>
+      <h2>Quem somos?</h2>
+      <p>A O Meu Quadro de Motivação é uma aplicação móvel de motivação para crianças, disponível em iPhone e Android. Responsável: O Meu Quadro de Motivação — Contacto: support@tdmotivation.app</p>
+      <h2>Dados recolhidos</h2>
+      <p>📱 No aparelho: nome próprio da criança, avatar ou fotografia, progresso, missões, recompensas, humor do dia, código dos pais.</p>
+      <p>☁️ Sincronizado em linha assim que um segundo aparelho é ligado (o tablet da criança, o telemóvel do segundo progenitor): tudo o que precede, bem como as fotografias que juntar às missões e a mensagem de voz que gravar para a criança.</p>
+      <p>👫 Se o espaço de amigos for utilizado: nome próprio, avatar, nível e série da criança, código de amigo, além das mensagens de voz e dos desafios trocados com os amigos. As mensagens de voz são eliminadas ao fim de 24 horas.</p>
+      <p>🔧 Técnicos: endereço de notificações do aparelho, identificador de conta, relatórios de falhas e estatísticas de utilização anónimas (sem nomes, sem conteúdo).</p>
+      <p>✅ Nunca recolhidos: apelido, morada, telefone, dados bancários, localização.</p>
+      <h2>Para que servem estes dados?</h2>
+      <ul><li>Funcionamento da aplicação e gravação do progresso</li><li>Espaço social opcional (entre famílias)</li><li>Autenticação do progenitor</li></ul>
+      <p>Base legal: consentimento do progenitor e execução do contrato de subscrição.</p>
+      <h2>Proteção das crianças</h2>
+      <p>👶 O espaço dos pais está protegido por um código, e qualquer ligação que saia da aplicação exige resolver uma operação reservada a adultos.</p>
+      <p>👫 O espaço de amigos é acessível à criança a partir do seu quadro: vê os amigos, pode aceitar um convite e trocar mensagens de voz com eles. Um amigo só se adiciona introduzindo um código transmitido em mão.</p>
+      <p>Nunca vendemos, partilhamos nem monetizamos dados de crianças. A aplicação não contém publicidade nem rastreadores.</p>
+      <h2>Partilha de dados</h2>
+      <p>Os seus dados nunca são vendidos. Passam apenas por:<br>• Google Firebase — alojamento, autenticação e sincronização<br>• Expo — entrega das notificações<br>• RevenueCat — gestão da subscrição<br>• Apple App Store e Google Play — pagamentos<br>• As famílias com quem a criança troca, se o espaço de amigos for utilizado</p>
+      <h2>Segurança</h2>
+      <ul><li>Dados locais: isolamento da aplicação (sandbox iOS e Android)</li><li>Firebase: TLS/SSL, com regras de acesso que reservam cada dado ao seu agregado</li><li>Palavra-passe da conta: gerida pelo Firebase, nunca acessível à aplicação</li><li>Código dos pais: mantido apenas no aparelho, nunca transmitido</li></ul>
+      <h2>Os seus direitos (RGPD)</h2>
+      <p>Tem o direito de aceder, corrigir, apagar e exportar os seus dados. Para exercer estes direitos ou colocar questões sobre privacidade, escreva-nos para support@tdmotivation.app — resposta no prazo de 30 dias.</p>
+    <footer>© 2026 O Meu Quadro de Motivação · Todos os direitos reservados</footer>
+  </section>
+  <section class="langue" id="l-ar" lang="ar" dir="rtl">
+    <header>
+      <h1>سياسة الخصوصية</h1>
+      <p class="sous">تطبيق لوحة التحفيز الخاصة بي</p>
+      <p class="maj">آخر تحديث: أغسطس 2026</p>
+    </header>
+    <p class="intro">🛡️ حماية خصوصية الأطفال والعائلات هي أولويتنا.</p>
+      <h2>من نحن ؟</h2>
+      <p>‏لوحة التحفيز الخاصة بي تطبيق محمول لتحفيز الأطفال، متوفر على iPhone وAndroid. المسؤول: لوحة التحفيز الخاصة بي — للتواصل: support@tdmotivation.app</p>
+      <h2>البيانات المجمّعة</h2>
+      <p>📱 على الجهاز: الاسم الأول للطفل، الصورة الرمزية أو الصورة، التقدّم، المهام، المكافآت، مزاج اليوم، رمز الوالدين.</p>
+      <p>☁️ تتم المزامنة عبر الإنترنت بمجرد ربط جهاز ثانٍ (جهاز الطفل اللوحي، هاتف الوالد الثاني): كل ما سبق، إضافة إلى الصور التي تضيفها إلى المهام والرسالة الصوتية التي تسجّلها لطفلك.</p>
+      <p>👫 عند استخدام مساحة الأصدقاء: الاسم الأول، الصورة الرمزية، المستوى والسلسلة، رمز الصديق، وكذلك الرسائل الصوتية والتحديات المتبادلة مع الأصدقاء. تُحذف الرسائل الصوتية بعد 24 ساعة.</p>
+      <p>🔧 بيانات تقنية: عنوان الإشعارات الخاص بالجهاز، معرّف الحساب، تقارير الأعطال وإحصاءات استخدام مجهولة (بلا أسماء وبلا محتوى).</p>
+      <p>✅ لا نجمع أبدًا: اسم العائلة، العنوان البريدي، رقم الهاتف، بيانات البطاقة، الموقع الجغرافي.</p>
+      <h2>لماذا هذه البيانات ؟</h2>
+      <ul><li>تشغيل التطبيق وحفظ التقدم</li><li>الفضاء الاجتماعي الاختياري</li><li>مصادقة الوالدين</li></ul>
+      <h2>حماية الأطفال</h2>
+      <p>👶 مساحة الوالدين محمية برمز، وكل رابط يغادر التطبيق يتطلب حل عملية حسابية مخصصة للكبار.</p>
+      <p>👫 مساحة الأصدقاء متاحة للطفل من لوحته: يرى أصدقاءه، ويمكنه قبول دعوة وتبادل الرسائل الصوتية معهم. لا يُضاف صديق إلا بإدخال رمز يُسلَّم يدًا بيد.</p>
+      <p>نحن لا نبيع بيانات الأطفال ولا نشاركها ولا نحقق منها أي ربح. ولا يحتوي التطبيق على أي إعلانات أو أدوات تتبّع.</p>
+      <h2>مشاركة البيانات</h2>
+      <p>لا تُباع بياناتك أبدًا. وهي تمر حصريًا عبر:<br>• Google Firebase — الاستضافة والمصادقة والمزامنة<br>• Expo — إيصال الإشعارات<br>• RevenueCat — إدارة الاشتراك<br>• Apple App Store و Google Play — المدفوعات<br>• العائلات التي يتبادل معها طفلك، في حال استخدام مساحة الأصدقاء</p>
+      <h2>الأمان</h2>
+      <ul><li>البيانات المحلية: عزل التطبيق (بيئة معزولة على iOS وأندرويد)</li><li>Firebase: تشفير TLS/SSL، وقواعد وصول تقصر كل بيان على عائلتك</li><li>كلمة مرور الحساب: يديرها Firebase، ولا يصل إليها التطبيق أبدًا</li><li>رمز الوالدين: يبقى على الجهاز وحده، ولا يُرسل أبدًا</li></ul>
+      <h2>حقوقك (RGPD)</h2>
+      <p>لديك الحق في الوصول إلى بياناتك وتصحيحها وحذفها وتصديرها. اتصل بنا على support@tdmotivation.app — رد خلال 30 يوماً.</p>
+    <footer>© 2026 لوحة التحفيز الخاصة بي · جميع الحقوق محفوظة</footer>
+  </section>
+<script>
+  var boutons = document.querySelectorAll('.barre button');
+  function montrer(code) {
+    document.querySelectorAll('.langue').forEach(function (s) {
+      s.classList.toggle('visible', s.id === 'l-' + code);
+    });
+    boutons.forEach(function (b) { b.classList.toggle('actif', b.dataset.l === code); });
+    document.documentElement.lang = code;
+  }
+  boutons.forEach(function (b) {
+    b.addEventListener('click', function () { montrer(b.dataset.l); });
+  });
+  var nav = (navigator.language || 'fr').slice(0, 2);
+  montrer(document.getElementById('l-' + nav) ? nav : 'fr');
+</script>
 </body>
 </html>
